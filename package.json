@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "convex:dev": "convex dev",
+    "convex:deploy": "convex deploy",
+    "convex:deploy:preview": "convex deploy --preview-create $(git branch --show-current)"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",
