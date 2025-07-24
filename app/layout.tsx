@@ -1,24 +1,25 @@
+import type React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { ConvexClientProvider } from './ConvexClientProvider';
+import { SidebarProvider } from '@/components/ui/sidebar';
+import { AppSidebar } from '@/components/app-sidebar';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'convex-test-v1',
-  description: 'A modern app built with Next.js, Convex, and Zustand',
+  title: 'CRM Dashboard',
+  description: 'Customer Relationship Management System',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+        <SidebarProvider>
+          <AppSidebar />
+          <main className="flex-1">{children}</main>
+        </SidebarProvider>
       </body>
     </html>
   );

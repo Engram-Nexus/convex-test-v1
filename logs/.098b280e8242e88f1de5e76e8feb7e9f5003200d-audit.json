@@ -1,0 +1,15 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "/opt/projects/convex-test-v1/logs/.098b280e8242e88f1de5e76e8feb7e9f5003200d-audit.json",
+  "files": [
+    {
+      "date": 1753320040368,
+      "name": "/opt/projects/convex-test-v1/logs/mcp-puppeteer-2025-07-24.log",
+      "hash": "52fe147b74fffefba63c66ad1937d7e6a686f7cbd9c001377365c4f9c47c1631"
+    }
+  ],
+  "hashType": "sha256"
+}
